@@ -65,30 +65,32 @@ AI Service: Gemini API
 
 External Service: Steam Web API 
 
-🚀 การติดตั้งและใช้งาน (Getting Started)
-(ส่วนนี้เป็นคำแนะนำมาตรฐานสำหรับโปรเจกต์ Spring Boot ครับ)
+วิธีการรันโปรเจกต์ (สำหรับ Developer)
 
-Clone a repository:
+Clone Repository:
 
-Bash
+git clone [URL-OF-THIS-PROJECT]
 
-git clone [Your Repository URL]
-cd my-game-backlog
-ตั้งค่า Environment:
 
-คัดลอก application.properties.example ไปเป็น application.properties
+ตั้งค่า Database:
 
-แก้ไขข้อมูลการเชื่อมต่อ Database (PostgreSQL/MySQL) 
+สร้าง Database PostgreSQL ชื่อ mygamebacklog_db (หรือชื่ออื่นตามที่แก้ใน application.properties)
 
-ใส่ API Keys ของคุณ (Steam Web API Key, Gemini API Key)
+ตั้งค่า API Keys:
 
-รันแอปพลิเคชัน:
+ไปที่ src/main/resources/application.properties
 
-Bash
+ใส่ API Keys ที่คุณไปขอมา:
+
+steam.api.key=YOUR_STEAM_KEY_HERE
+gemini.api.key=YOUR_GEMINI_KEY_HERE
+
+
+รันโปรเจกต์ (ผ่าน Maven):
 
 mvn spring-boot:run
-ใช้งาน API:
 
-API จะรันอยู่ที่ http://localhost:8080
 
-(แนะนำให้เพิ่ม) ดูเอกสาร API ทั้งหมดได้ที่ http://localhost:8080/swagger-ui.html
+เข้าใช้งาน:
+
+API Server จะรันที่ http://localhost:8080
